@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #efbec5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+
+    touch-action: manipulation;
+}
+
+/* Aura */
+.aura {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,215,150,0.25), transparent 70%);
+    filter: blur(20px);
+    animation: auraPulse 4s ease-in-out infinite;
+}
+
+/* SET 1 Letter */
+#letter {
+    width: min(85vw, 550px);
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    animation: tension 0.8s ease-in-out infinite;
+}
+
+/* Hover reaction for L2 */
+#letter.l2-hover:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+/* Hint */
+#hint {
+    position: absolute;
+    bottom: 15%;
+    color: rgba(14, 0, 0, 0.6);
+    font-size: 20px;
+    letter-spacing: 2px;
+    animation: hintFade 3s ease-in-out infinite;
+}
+
+/* Hearts */
+.heart {
+    position: fixed;
+    width: 90px;
+    height: 90px;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* ===== SET 2 ===== */
+
+#letterWrapper {
+    display: none;
+    position: absolute;
+    width: min(88vw, 420px);
+    opacity: 1;
+    transition: opacity 1s ease;
+    z-index: 6;
+}
+
+#letterWrapper.fade-out {
+    opacity: 0;
+}
+
+#paper {
+    width: 100%;
+}
+
+#textArea {
+    position: absolute;
+    top: 24%;
+    left: 14%;
+    width: 72%;
+    height: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Homemade Apple', cursive;
+    font-size: clamp(22px, 4.5vw, 32px);
+    line-height: 1.75;
+}
+
+/* Video Overlay */
+#videoOverlay {
+    position: fixed;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease;
+    z-index: 10;
+}
+
+#flowerVideo {
+    width: 80vw;
+    max-width: 520px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0;
+    transition: opacity 2.5s ease, transform 2.5s ease;
+}
+
+#videoOverlay.show {
+    opacity: 1;
+}
+
+#videoOverlay.show #flowerVideo {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Animations */
+@keyframes tension {
+    0%,100% { transform: rotate(0deg); }
+    25% { transform: rotate(-1deg); }
+    50% { transform: rotate(1deg); }
+    75% { transform: rotate(-1deg); }
+}
+
+@keyframes auraPulse {
+    0%,100% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(1.15); opacity: 0.7; }
+}
+
+@keyframes hintFade {
+    0%,100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
