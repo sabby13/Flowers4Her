@@ -46,4 +46,4 @@ https://sabby13.github.io/Flowers4Her/
 ---
 
 ## 💭 Final Note
-Sometimes all you need is a special person to be better and that’s enough.
+Sometimes all you need is a special person to be better and that is enough.
