@@ -1,8 +1,9 @@
 #  Flowers 4 Her🌷💌
 
-Well she wanted flowers 
+Well she wanted flowers <br>
 The designer & coder in me couldnt have a better reason to make this.
 
+![GIF-2026-02-08-23-33-53](https://github.com/user-attachments/assets/514c7f97-ea11-4c6d-a4cd-8124626926ed)
 
 
 ## 🛠️ Tech Stack
