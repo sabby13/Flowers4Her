@@ -16,7 +16,7 @@ No frameworks. No libraries. Full control.
 
 ---
 
-## 📱 Mobile Support
+## 📱 View Support
 
 Designed to work smoothly on:
 - Mobile
