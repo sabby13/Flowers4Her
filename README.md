@@ -19,9 +19,9 @@ No frameworks. No libraries. Full control.
 ## 📱 Mobile Support
 
 Designed to work smoothly on:
-- Android  
-- iOS  
-- Desktop  
+- Mobile
+- Desktop (this has a better feel)
+- Samsung Smart Fridge  
 
 Touch handling, scaling, and performance are carefully handled.
 
